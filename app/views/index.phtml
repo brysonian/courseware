@@ -1,0 +1,25 @@
+<section>
+	<div class="meta">
+    <p>
+      <?=$days?><br><?=options('time')?><br>
+      <?=options('location')?><br>
+    </p>
+
+    <p>
+      Professor: <?php echo Enkoder::enkode_mail(options('instructor_email'), options('instructor'));?> (office hours: <?=options('office_hours')?>)<br>
+      <?php if(options('ta')): ?>
+        <?php if(is_array(options('ta'))) :
+                $tas = array();
+                foreach(options('ta') as $ta) {
+                  $tas[] = Enkoder::enkode_mail($ta->email, $ta->name) . ' (office hours: ' . $ta->office_hours . ')';
+                }
+                echo 'TA: ' . join(' &amp; ', $tas); ?>
+
+        <?php else: ?>
+          TA: <?php echo Enkoder::enkode_mail(options('ta_email'), options('ta'));?> (office hours: <?=options('ta_office_hours')?>)
+        <?php endif; ?>
+      <?php endif; ?>
+    </p>
+  </div>
+	<?=$syllabus?>
+</section>

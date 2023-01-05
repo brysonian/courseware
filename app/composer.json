@@ -1,0 +1,17 @@
+{
+    "repositories": [
+    {
+        "type": "path",
+        "url":"vendor/vicious/vicious",
+        "options": {
+            "symlink": true
+        }
+    }
+    ],
+    "require": {
+        "league/commonmark": "^2.3",
+        "vicious/vicious": "dev-main",
+        "symfony/yaml": "^6.2",
+        "cocur/slugify": "^4.3"
+    }
+}

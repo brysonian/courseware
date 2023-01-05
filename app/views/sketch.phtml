@@ -1,0 +1,21 @@
+<div>
+	<div>
+		<canvas id="sketch" data-processing-sources="<?=options('doc_root')?>/content<?=$sketch_path?>"
+				width="600" height="600">
+			<p>Your browser does not support the canvas tag.</p>
+			<!-- Note: you can put any alternative content here. -->
+		</canvas>
+		<noscript>
+			<p>JavaScript is required to view the contents of this page.</p>
+		</noscript>
+	</div>
+	<h2>Source Code:</h2>
+	<p id="source">
+		<pre class="prettyprint language-java"><?= htmlentities($source) ?></pre>
+		Download: <a href="<?=options('doc_root')?>/content<?=$sketch_path?>"><?=$sketch?></a>
+	</p>
+	<p>
+		Built with <a href="http://processing.org" title="Processing">Processing</a>
+		and <a href="http://processingjs.org" title="Processing.js">Processing.js</a>
+	</p>
+</div>

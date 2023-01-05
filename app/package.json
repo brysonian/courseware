@@ -1,0 +1,15 @@
+{
+  "name": "Courseware",
+  "version": "1.5.22.01.04",
+  "scripts": {
+    "start": "parcel watch src/style/main.scss",
+    "build": "parcel build src/style/main.scss",
+    "bundle": "php utils/bundle.php"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2"
+  }
+}

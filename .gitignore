@@ -5,3 +5,4 @@ build
 *.log
 composer.lock
 vendor
+.parcel-cache

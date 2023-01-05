@@ -1,0 +1,300 @@
+$blue: #155EDB;
+$black: #171717;
+$grey: #403E3F;
+
+$page-size: 800px;
+
+@import "reset";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic|Montserrat:400,700);
+
+
+body
+{
+	font-family: var(--body-font, -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji");
+	font-size: 14px;
+	line-height: 1.6em;
+	background-color: white;
+	margin-top: 0;
+
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: $grey;
+
+	opacity: 1;
+}
+
+main {
+	margin-bottom: 80px;
+}
+
+.meta
+{
+	// @include clearfix;
+	margin-top: 40px;
+	padding: 0;
+	// background-color: #efefef;
+
+	p
+	{
+		// @include span-columns(6);
+		// @include shift(1);
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+}
+
+a
+{
+	color: $black;
+}
+
+nav
+{
+	// @include outer-container;
+	// @include span-columns(6 of 12);
+	// @include shift(1);
+	margin-left: 40px;
+	margin-right: 40px;
+
+	max-width: $page-size;
+	border-bottom: 1px solid rgb(0.18, 0.19, 0.22);
+	padding: 40px 0 25px 0;
+	margin-bottom: 25px;
+
+	@media only screen and (max-width: 470px) {
+		// margin-right: 40px;
+	}
+
+
+	h1, h2
+	{
+		font-family: var(--header-font, -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji");
+		text-transform: uppercase;
+		font-size: 44px;
+		line-height: 1.2em;
+	}
+	h2 {
+		font-weight: normal;
+		font-size: 25px;
+	}
+
+	ul {
+		margin-top: 10px;
+		li {
+			display: inline;
+			padding-right: 10px;
+		}
+	}
+
+	a {
+		color: $grey;
+	}
+}
+
+section
+{
+	// @include outer-container;
+	// @include span-columns(6 of 12);
+	// @include shift(1);
+	margin-left: 40px;
+	margin-right: 40px;
+	max-width: $page-size;
+
+	font-weight: normal;
+	// line-height: 1.4em;
+
+	a
+	{
+		border-bottom: 1px dotted rgb(0.18, 0.19, 0.22);
+		color: $black;
+	}
+
+	a:hover
+	{
+		color: white;
+		background-color: $black;
+	}
+
+	p, ul, ol
+	{
+		font-weight: 300;
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+
+	h2
+	{
+		margin: 40px 0 20px 0;
+		font-weight: normal;
+		text-transform: uppercase;
+		&:first-child {
+			margin-top: 20px;
+		}
+	}
+}
+
+body.index
+{
+	.intro p
+	{
+		font-size: 16px;
+		// line-height: 1.3em;
+	}
+
+	section h1 {
+		margin: 30px 0 10px;
+		font-size: 22px;
+	}
+
+	section h2 {
+		color: $black;
+		font-weight: 700;
+	}
+
+	ul li {
+		margin-bottom: 10px;
+	}
+}
+
+body.page
+{
+	section h1 {
+		color: $black;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin: 40px 0 10px;
+		font-weight: 400;
+	}
+}
+
+body.projects
+{
+	section
+	{
+		padding-bottom: 40px;
+		margin-top: 40px;
+		border-bottom: 1px solid rgb(0.18, 0.19, 0.22);
+
+		ol {
+			list-style-type: decimal;
+			list-style-position: inside;
+
+			li {
+				margin-bottom: 5px;
+			}
+		}
+
+		ul.topics {
+			list-style: none;
+			-webkit-columns: 300px 2;
+			-moz-columns: 300px 2;
+			columns: 300px 2;
+			margin-bottom: 25px;
+		}
+
+		h1 {
+			margin-bottom: 10px;
+			font-size: 22px;
+			color: $black;
+		}
+
+		h2
+		{
+			margin-top: 0px;
+			font-size: 16px;
+		}
+
+		h3 {
+			margin: 30px 0 10px;
+			font-weight: normal;
+			text-transform: uppercase;
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+body.schedule	main
+{
+	section>ol
+	{
+		margin-left: 0;
+		max-width: $page-size;
+		font-size: 16px;
+
+		&>li:first-child h1 {
+			border: none;
+			padding-top: 0;
+		}
+
+		h2 {
+			margin: 0 0 10px;
+			font-weight: bold;
+			text-transform: none;
+		}
+
+		h1 {
+			text-transform: uppercase;
+			font-weight: normal;
+			margin-bottom: 10px;
+			border-top: 1px solid rgb(0.18, 0.19, 0.22);
+			padding-top: 24px;
+		}
+
+		li>ol
+		{
+			// border-bottom: 1px solid rgb(0.18, 0.19, 0.22);
+			// @include row(table);
+			padding-bottom: 40px;
+			grid-template-columns: 1fr 1fr;
+			display: grid;
+
+			@media only screen and (max-width: 470px) {
+				display: block;
+			}
+
+			&>li {
+				// @include span-columns(3);
+				padding-right: 10px;
+
+				li {
+					display: block;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+blockquote p {
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+.projects {
+	img {
+		max-width: 100%;
+	}
+
+	ul {
+		list-style: disc;
+		list-style-position: outside;
+	}
+
+	ol li {
+		list-style-position: outside;
+	}
+	em {
+		border: 1px solid #171717;
+		padding: 0 2px;
+		text-decoration: none;
+		background: black;
+		color: white;
+	}
+}
+
+.holiday {
+	text-decoration: line-through;
+}

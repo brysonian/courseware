@@ -1,0 +1,23 @@
+<section>
+<ol>
+<?php foreach($schedule as $week_num=>$week):
+	if ($week_num == 'holiday') {
+		continue;
+	}
+?>
+	<li>
+		<h1>Week <?=$week_num?></h1>
+		<ol>
+			<?php foreach($week as $day_num=>$day): ?>
+				<li>
+					<h2 class="<?= isset($schedule['holiday']["$week_num.$day_num"]) ? 'holiday' : '' ?>">
+						<?=date_for_week_and_day($week_num, $day_num)->format('l n/j');?>
+					</h2>
+					<?= $schedule[$week_num][$day_num]; ?>
+				</li>
+			<?php endforeach; ?>
+		</ol>
+	</li>
+<?php endforeach; ?>
+</ol>
+</section>
