@@ -2,6 +2,7 @@
 
 define('PUBLIC_ROOT', __DIR__);
 define('DEBUG', 1);
+define('DEV', 1);
 
 # open htaccess and parse out base path
 $base = '';
@@ -15,5 +16,8 @@ try {
 
 define('PUBLIC_URL', $base);
 
-require './app/app.php';
-// require './courseware.phar';
+if (defined('DEBUG')) {
+  require './app/app.php';
+} else {
+  require './courseware.phar';
+}
