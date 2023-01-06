@@ -6,7 +6,7 @@
 
 define('DEBUG', 1);
 define('DEV', 1);
-define('CONTENT_DIR', 'content');
+define('CONTENT_DIR', '403');
 
 
 

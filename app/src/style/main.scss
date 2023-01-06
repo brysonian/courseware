@@ -141,6 +141,13 @@ body.index
 		// line-height: 1.3em;
 	}
 
+	blockquote p {
+		margin: 40px auto 40px 40px;
+		max-width: 80%;
+		font-size: 16px;
+		font-style: italic;
+	}
+
 	section h1 {
 		margin: 30px 0 10px;
 		font-size: 22px;
