@@ -6,7 +6,10 @@
     </p>
 
     <p>
-      Professor: <?php echo Enkoder::enkode_mail(options('instructor_email'), options('instructor'));?> (office hours: <?=options('office_hours')?>)<br>
+      Professor: <?php echo Enkoder::enkode_mail(options('instructor_email'), options('instructor'));?>
+      <?php if (options('office_hours')): ?>
+        &nbsp;(office hours: <?=options('office_hours')?>)<br>
+      <?php endif; ?>
       <?php if(options('ta')): ?>
         <?php if(is_array(options('ta'))) :
                 $tas = array();
