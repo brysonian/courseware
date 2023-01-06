@@ -4,7 +4,7 @@
   "scripts": {
     "start": "parcel watch src/style/main.scss",
     "build": "parcel build src/style/main.scss",
-    "bundle": "php utils/bundle.php"
+    "bundle": "npm run build && php utils/bundle.php"
   },
   "author": "",
   "license": "ISC",

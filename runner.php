@@ -1,8 +1,17 @@
 <?php
 
-define('PUBLIC_ROOT', __DIR__);
+##########################################
+#             CONFIGURATION              #
+##########################################
+
 define('DEBUG', 1);
 define('DEV', 1);
+
+
+
+
+##########################################
+define('PUBLIC_ROOT', __DIR__);
 
 # open htaccess and parse out base path
 $base = '';

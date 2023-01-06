@@ -1,9 +1,10 @@
 <?php
 
 $src = __DIR__ . "/..";
-$out = __DIR__ . "/../../courseware.phar";
+$out_name = 'courseware.phar';
+$out_dir = __DIR__ . "/../..";
 
-class TestsOnlyFilter extends RecursiveFilterIterator {
+class IgnoreSomeDirsFilter extends RecursiveFilterIterator {
   public function accept() : bool {
     $ignore = [
       'parcel-cache',
@@ -21,16 +22,13 @@ class TestsOnlyFilter extends RecursiveFilterIterator {
   }
 }
 
-
+echo "\n> Bundling app directory into $out_name\n";
 $directory = new \RecursiveDirectoryIterator($src, FilesystemIterator::SKIP_DOTS);
-$filter   = new TestsOnlyFilter($directory);
+$filter   = new IgnoreSomeDirsFilter($directory);
 $iterator = new \RecursiveIteratorIterator($filter);
 
-// foreach($iterator as $key => $value)
-// {
-//     echo $value . "\n";
-// }
-
-$phar = new Phar($out,  0, "courseware.phar");
+$phar = new Phar($out_dir . '/' . $out_name,  0, $out_name);
 $phar->buildFromIterator($iterator, $src);
 $phar->setStub($phar->createDefaultStub('app.php', 'app.php'));
+
+echo "> Bundling complete\n";
