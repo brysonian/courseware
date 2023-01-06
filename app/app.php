@@ -18,10 +18,11 @@ if (defined('DEBUG') || isset($_GET['debug'])) {
 
 configure(function ($settings) {
 	$isphar = current(explode('://', __DIR__)) === 'phar';
+	$content_dir = defined('CONTENT_DIR') ? CONTENT_DIR : 'content';
 
 	$settings->root 						= PUBLIC_URL;
-	$settings->content 					= realpath(PUBLIC_ROOT . '/content');
-	$settings->content_url 			= $settings->root . '/content';
+	$settings->content 					= realpath(PUBLIC_ROOT . '/' . $content_dir);
+	$settings->content_url 			= $settings->root . '/' . $content_dir;
 	$settings->projects 				= realpath(PUBLIC_ROOT . '/projects');
 	$settings->templates				= $isphar ? (__DIR__ . '/views') : realpath(__DIR__ . '/views');
 	$settings->assets 					= $isphar ? (__DIR__ . '/dist') : realpath(__DIR__ . '/dist');
