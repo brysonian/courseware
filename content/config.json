@@ -9,8 +9,7 @@
 			"office_hours": "TBD"
 		}
 	],
-	"classname"       : "Sample Class",
-	"classnumber"     : "625",
+	"class_name"      : "Sample Class",
 	"term"            : "Winter 2023",
 	"days_of_week"    : ["M", "W"],
 	"time"            : "2:00 PM–4:50 PM",
