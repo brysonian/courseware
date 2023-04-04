@@ -4,7 +4,8 @@ To set some PHP-level config options, rename .env.example to .env
 all of these are optional and the default values are described below
 
 * `DEBUG` enables error display (this may be affected by local php config)
-* `USE_PHAR` loads the app code from the specified phar file rather than the `app` directory
+* `PHAR` loads the app code from the specified phar file. The default is `./courseware.phar`
+* `USE_APP_DIR` use the `app` directory instead of a phar. Useful for debugging and development
 * `CONTENT_DIR` will use the specified directory to load site content. The default is `content`
 
 ## Building sass

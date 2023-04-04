@@ -7,6 +7,8 @@ if (file_exists('.env')) {
   foreach ($env as $k => $v) {
     define($k, $v);
   }
+} else {
+  define('PHAR', './courseware.phar');
 }
 
 ##########################################
@@ -26,8 +28,8 @@ if (!defined('PUBLIC_URL')) {
   define('PUBLIC_URL', $base);
 }
 
-if (defined('USE_PHAR')) {
-  require USE_PHAR;
-} else {
+if (defined('USE_APP_DIR')) {
   require './app/app.php';
+} else {
+  require PHAR;
 }
