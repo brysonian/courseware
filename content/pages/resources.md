@@ -1,0 +1,7 @@
+---
+name: Resources
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Pri posse graeco definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te. Vivendum intellegat et qui, ei denique consequuntur vix. An dicant apeirian qui, at vide indoctum pro. Unum dicam posidonium eu vix, sea eu ubique viderer civibus, oporteat signiferumque eos et. No vis iuvaret appareat. Vivendum intellegat et qui, ei denique consequuntur vix. Vivendum intellegat et qui, ei denique consequuntur vix. Scripta periculis ei eam, te pro movet reformidans. Pri posse graeco definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te. Scripta periculis ei eam, te pro movet reformidans. Tritani reprehendunt pro an, his ne liber iusto. An dicant apeirian qui, at vide indoctum pro. Pri posse graeco definitiones cu, id eam populo quaestio adipiscing, usu quod malorum te. Pri viderer tamquam ei. Offendit eleifend moderatius ex vix, quem odio mazim et qui, purto expetendis cotidieque quo cu, veri persius vituperata ei nec.
+
+[Link to Foo]({root}/foo)

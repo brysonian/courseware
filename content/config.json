@@ -1,0 +1,21 @@
+{
+	"instructor"      : "Bettie Fisher",
+	"instructor_email": "fisher@foo.edu",
+	"office_hours"    : "Wednesday 1:00-2:00",
+	"ta"							: [
+		{
+			"name": "Mario Montgomery",
+			"email": "montgomery@g.ucla.edu",
+			"office_hours": "TBD"
+		}
+	],
+	"classname"       : "Sample Class",
+	"classnumber"     : "625",
+	"term"            : "Winter 2023",
+	"days_of_week"    : ["M", "W"],
+	"time"            : "2:00 PM–4:50 PM",
+	"location"        : "Class Room",
+	"term_start_date" : "2023-01-09",
+	"term_end_date"   : "2023-03-17",
+	"week_zero"				: false
+}
