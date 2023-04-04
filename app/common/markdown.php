@@ -18,7 +18,8 @@ function parse_markdown($file, $isfile = true) {
 	}
 
 	# replace tokens
-	$md = str_replace(array('{content}', '{root}'), array(options('content_url'), options('root')), $md);
+	// $md = str_replace(array('{content}', '{root}'), array(options('content_url'), options('root')), $md);
+	$md = str_replace('{content}', options('content_url'), $md);
 
 	$matches = array();
 	$weekandday = '|^\[(\d+)\.([MTWRFSU\d])\]|';

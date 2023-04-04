@@ -12,7 +12,12 @@
     </style>
     <link rel="stylesheet" href="<?=css('main.css')?>">
     <?php if ($user_style): ?>
-      <link rel="stylesheet" href="<?=$user_style?>">
+      <link
+        rel="stylesheet"
+        as="style"
+        blocking="render"
+        href="<?=$user_style?>"
+      >
     <?php endif; ?>
 </head>
 <body class="<?=$this->template()?>-template <?= join(' ' , $body_class); ?>">
