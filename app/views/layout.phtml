@@ -28,9 +28,9 @@
         <li><a href="<?=link_url('projects')?>">Projects</a></li>
       <?php endif; ?>
       <?php if ($pages): ?>
-        <?php foreach($pages as $page): ?>
+        <?php foreach($pages as $page): if ($page['show_in_nav'] == true): ?>
           <li><a href="<?=link_url($page['slug'])?>"><?=$page['name']?></a></li>
-        <?php endforeach; ?>
+        <?php endif; endforeach; ?>
       <?php endif; ?>
     </ul>
   </nav>

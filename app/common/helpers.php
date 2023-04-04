@@ -258,6 +258,7 @@ function get_pages() {
 		$pages[] = array(
 			'content' => $content['content'],
 			'name' => $content['meta']['name'],
+			'show_in_nav' => $content['meta']['show_in_nav'] ?? true,
 			// 'file' => $file,
 			'slug' => $fname
 		);
