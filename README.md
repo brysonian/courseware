@@ -9,7 +9,7 @@ all of these are optional and the default values are described below
 * `CONTENT_DIR` will use the specified directory to load site content. The default is `content`
 
 ## Building sass
-Styles are written in sass. You can compile them by cding into `app` via parcel using `npm run build` You can also watch for changes (useful for development) using `npm start`
+Styles are written in sass. You can compile them by using parcel. First cd into `app` and run `npm run build` You can also watch for changes (useful for development) using `npm start`
 
 ## Bundling
 The app dir can be bundled into a phar archive using `npm run bundle` in the `app` dir.
