@@ -6,3 +6,4 @@ build
 composer.lock
 vendor
 .parcel-cache
+.env
