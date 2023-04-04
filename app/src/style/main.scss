@@ -2,11 +2,12 @@ $blue: #155EDB;
 $black: #171717;
 $grey: #403E3F;
 
-$page-size: 800px;
-
 @import "reset";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic|Montserrat:400,700);
 
+:root {
+	--page-size: 800px;
+}
 
 body
 {
@@ -56,7 +57,7 @@ nav
 	margin-left: 40px;
 	margin-right: 40px;
 
-	max-width: $page-size;
+	max-width: var(--page-size);
 	border-bottom: 1px solid rgb(0.18, 0.19, 0.22);
 	padding: 40px 0 25px 0;
 	margin-bottom: 25px;
@@ -98,7 +99,7 @@ section
 	// @include shift(1);
 	margin-left: 40px;
 	margin-right: 40px;
-	max-width: $page-size;
+	max-width: var(--page-size);
 
 	font-weight: normal;
 	// line-height: 1.4em;
@@ -174,134 +175,11 @@ body.page
 	}
 }
 
-body.projects
-{
-	section
-	{
-		padding-bottom: 40px;
-		margin-top: 40px;
-		border-bottom: 1px solid rgb(0.18, 0.19, 0.22);
-
-		ol {
-			list-style-type: decimal;
-			list-style-position: inside;
-
-			li {
-				margin-bottom: 5px;
-			}
-		}
-
-		ul.topics {
-			list-style: none;
-			-webkit-columns: 300px 2;
-			-moz-columns: 300px 2;
-			columns: 300px 2;
-			margin-bottom: 25px;
-		}
-
-		h1 {
-			margin-bottom: 10px;
-			font-size: 22px;
-			color: $black;
-		}
-
-		h2
-		{
-			margin-top: 0px;
-			font-size: 16px;
-		}
-
-		h3 {
-			margin: 30px 0 10px;
-			font-weight: normal;
-			text-transform: uppercase;
-		}
-
-		&:first-child {
-			margin-top: 0;
-		}
-	}
-}
-
-body.schedule	main
-{
-	section>ol
-	{
-		margin-left: 0;
-		max-width: $page-size;
-		font-size: 16px;
-
-		&>li:first-child h1 {
-			border: none;
-			padding-top: 0;
-		}
-
-		h2 {
-			margin: 0 0 10px;
-			font-weight: bold;
-			text-transform: none;
-		}
-
-		h1 {
-			text-transform: uppercase;
-			font-weight: normal;
-			margin-bottom: 10px;
-			border-top: 1px solid rgb(0.18, 0.19, 0.22);
-			padding-top: 24px;
-		}
-
-		li>ol
-		{
-			// border-bottom: 1px solid rgb(0.18, 0.19, 0.22);
-			// @include row(table);
-			padding-bottom: 40px;
-			grid-template-columns: 1fr 1fr;
-			display: grid;
-
-			@media only screen and (max-width: 470px) {
-				display: block;
-			}
-
-			&>li {
-				// @include span-columns(3);
-				padding-right: 10px;
-
-				li {
-					display: block;
-					font-size: 14px;
-				}
-			}
-		}
-	}
-}
 
 blockquote p {
 	font-size: 12px;
 	margin-top: 10px;
 }
 
-.projects {
-	img {
-		max-width: 100%;
-	}
-
-	ul {
-		list-style: disc;
-		list-style-position: outside;
-	}
-
-	ol li {
-		list-style-position: outside;
-	}
-	em {
-		border: 1px solid #171717;
-		padding: 0 2px;
-		text-decoration: none;
-		background: black;
-		color: white;
-	}
-}
-
-.holiday {
-	text-decoration: line-through;
-}
+@import "schedule";
+@import "projects";

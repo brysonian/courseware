@@ -1,0 +1,52 @@
+.week
+{
+	margin-left: 0;
+	max-width: var(--page-size);
+	font-size: 16px;
+
+	border-top: 1px solid rgb(0.18, 0.19, 0.22);
+	padding-top: 24px;
+	padding-bottom: 24px;
+
+
+	&:first-child {
+		border: none;
+		padding-top: 0;
+	}
+
+	.week-day-date {
+		margin: 0 0 10px;
+		font-weight: bold;
+		text-transform: none;
+
+		&.holiday {
+			text-decoration: line-through;
+		}
+	}
+
+	.week-number {
+		text-transform: uppercase;
+		font-weight: normal;
+		margin-bottom: 10px;
+	}
+
+	.week-content {
+		padding-bottom: 0;
+		margin-bottom: 0;
+		grid-template-columns: 1fr 1fr;
+		display: grid;
+
+		@media only screen and (max-width: 470px) {
+			display: block;
+		}
+	}
+
+	.week-day {
+		padding-right: 10px;
+	}
+
+	.week-day-content li {
+		display: block;
+		font-size: 14px;
+	}
+}

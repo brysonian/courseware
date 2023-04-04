@@ -1,12 +1,14 @@
 <?php foreach($projects as $project): ?>
-<section>
-	<h1 id="<?=$project['slug']?>">
-		<span># <?=$project['number']?></span>
+<section class="project">
+	<h1 id="<?=$project['slug']?>" class="project-title">
+		<span class="project-number"># <?=$project['number']?></span>
 		<?=$project['title']?>
 	</h1>
 	<?php if ($project['due']): ?>
-		<h2>Due on <?=$project['due']?></h2>
+		<h2 class="project-due-date">Due on <?=$project['due']?></h2>
 	<?php endif; ?>
-	<?=$project['content']?>
+	<div class="project-content">
+		<?=$project['content']?>
+	</div>
 </section>
 <?php endforeach; ?>

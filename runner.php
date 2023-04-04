@@ -4,10 +4,10 @@
 #             CONFIGURATION              #
 ##########################################
 
-define('USE_PHAR', 1);
+// define('USE_PHAR', 1);
 
 # use the specified directory to load site content, the default is to use the dir named `content`
-define('CONTENT_DIR', '403');
+define('CONTENT_DIR', '152');
 
 # enable error display (this may be affected by local php config)
 # define('DEBUG', 1);
