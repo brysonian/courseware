@@ -2,6 +2,7 @@
 
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
+use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\FrontMatter\FrontMatterExtension;
 use League\CommonMark\Extension\FrontMatter\Output\RenderedContentWithFrontMatter;
 use League\CommonMark\MarkdownConverter;
@@ -52,6 +53,7 @@ function parse_markdown($file, $isfile = true) {
     'allow_unsafe_links' => true,
 	]);
 	$environment->addExtension(new CommonMarkCoreExtension());
+	$environment->addExtension(new AttributesExtension());
 	$environment->addExtension(new FrontMatterExtension());
 	$converter = new MarkdownConverter($environment);
 

@@ -170,10 +170,13 @@ body.page
 	}
 }
 
-
 blockquote p {
 	font-size: 12px;
 	margin-top: 10px;
+}
+
+.bulleted {
+	list-style-type: disc;
 }
 
 @import "schedule";
