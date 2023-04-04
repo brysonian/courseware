@@ -4,9 +4,13 @@
 #             CONFIGURATION              #
 ##########################################
 
-define('DEBUG', 1);
-define('DEV', 1);
+define('USE_PHAR', 1);
+
+# use the specified directory to load site content, the default is to use the dir named `content`
 define('CONTENT_DIR', '403');
+
+# enable error display (this may be affected by local php config)
+# define('DEBUG', 1);
 
 
 
@@ -25,8 +29,8 @@ try {
 
 define('PUBLIC_URL', $base);
 
-if (defined('DEBUG')) {
-  require './app/app.php';
-} else {
+if (defined('USE_PHAR')) {
   require './courseware.phar';
+} else {
+  require './app/app.php';
 }

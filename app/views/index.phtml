@@ -1,11 +1,11 @@
 <section>
 	<div class="meta">
-    <p>
+    <p class="info">
       <?=$days?><br><?=options('time')?><br>
       <?=options('location')?><br>
     </p>
 
-    <p>
+    <p class="instructors">
       Professor: <?php echo Enkoder::enkode_mail(options('instructor_email'), options('instructor'));?>
       <?php if (options('office_hours')): ?>
         &nbsp;(office hours: <?=options('office_hours')?>)<br>
