@@ -7,7 +7,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Lorem
 
-{.bulleted}
+{: .bulleted}
 1. Offendit eleifend moderatius ex vix
 2. Pri posse graeco definitiones
 3. Errem laboramus sit ei

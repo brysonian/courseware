@@ -31,6 +31,11 @@ before(function() {
 		phtml()->user_style = content_url('style.css');
 	}
 
+	phtml()->user_js = false;
+	if (file_exists(content('scripts.js'))) {
+		phtml()->user_js = content_url('scripts.js');
+	}
+
 	$pages = get_pages();
 	phtml()->pages = $pages;
 });

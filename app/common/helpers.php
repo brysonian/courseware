@@ -81,6 +81,10 @@ function css() {
 	return str_replace('//', '/', '/' . PUBLIC_URL . '/dist/' . join('/', func_get_args()));
 }
 
+function js() {
+	return str_replace('//', '/', '/' . PUBLIC_URL . '/dist/' . join('/', func_get_args()));
+}
+
 // ========
 // - UTILS
 // ========

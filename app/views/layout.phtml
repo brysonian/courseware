@@ -14,6 +14,11 @@
         href="<?=$user_style?>"
       >
     <?php endif; ?>
+    <?php if ($user_js): ?>
+      <script type="application/javascript" src="<?=$user_js?>"></script>
+    <?php else: ?>
+      <script type="application/javascript" src="<?=js('main.js')?>"></script>
+    <?php endif; ?>
 </head>
 <body class="<?=$this->template()?>-template <?= join(' ' , $body_class); ?>">
   <nav>

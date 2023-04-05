@@ -2,8 +2,8 @@
   "name": "Courseware",
   "version": "1.5.22.01.04",
   "scripts": {
-    "start": "parcel watch src/style/main.scss",
-    "build": "parcel build src/style/main.scss",
+    "start": "parcel watch src/js/main.js",
+    "build": "parcel build src/js/main.js",
     "bundle": "npm run build && php utils/bundle.php"
   },
   "author": "",
@@ -11,5 +11,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.2",
     "parcel": "^2.8.2"
+  },
+  "dependencies": {
+    "flamethrower-router": "^0.0.0-meme.12"
   }
 }
