@@ -20,7 +20,7 @@ configure(function ($settings) {
 	$isphar = current(explode('://', __DIR__)) === 'phar';
 	$content_dir = defined('CONTENT_DIR') ? CONTENT_DIR : 'content';
 
-	$settings->root 						= PUBLIC_URL;
+	$settings->public_url				= PUBLIC_URL;
 	$settings->content 					= realpath(PUBLIC_ROOT . '/' . $content_dir);
 	$settings->content_url 			= $settings->root . '/' . $content_dir;
 	$settings->projects 				= realpath(PUBLIC_ROOT . '/projects');

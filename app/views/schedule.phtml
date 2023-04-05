@@ -10,7 +10,14 @@
 			<?php foreach($week as $day_num=>$day): ?>
 				<li class="week-day">
 					<h2 class="week-day-date <?= isset($schedule['holiday']["$week_num.$day_num"]) ? 'holiday' : '' ?>">
-						<?=date_for_week_and_day($week_num, $day_num)->format('l n/j');?>
+						<?php
+							$d = date_for_week_and_day($week_num, $day_num);
+							if ($d instanceof DateTime) {
+								echo $d->format('l n/j');
+							} else {
+								echo $d;
+							}
+						?>
 					</h2>
 					<div class="week-day-content">
 						<?= $schedule[$week_num][$day_num]; ?>

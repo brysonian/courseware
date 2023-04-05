@@ -33,7 +33,8 @@
 	.week-content {
 		padding-bottom: 0;
 		margin-bottom: 0;
-		grid-template-columns: 1fr 1fr;
+		grid-auto-columns: 1fr;
+		grid-auto-flow: column;
 		display: grid;
 
 		@media only screen and (max-width: 470px) {

@@ -11,6 +11,16 @@ function content($path, $subdir=false) {
 	return realpath($subdir . DIRECTORY_SEPARATOR . $path);
 }
 
+function public_url() {
+	$args = func_get_args();
+	if (func_num_args() == 1) {
+		if (empty($args[0])) return '';
+		if (strpos($args[0], 'http://') === 0) return $args[0];
+	}
+	$path = '/' . join('/', $args);
+	return str_replace(options('doc_root'), '', str_replace('//', '/', $path));
+}
+
 function content_url() {
 	$args = func_get_args();
 	if (func_num_args() == 1) {
@@ -158,7 +168,7 @@ function date_for_week_and_day($week, $day) {
 		return $class_dates[$week][$day];
 	}
 
-	die("Invalid week: $week and day: $day [$week.$day]");
+	return "Invalid date: [$week.$day]";
 }
 
 function class_dates($start=false, $end=false, $week0=false) {
